@@ -21,3 +21,6 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+ui/node_modules/
+ui/node_modules/angular-material/modules/closure/gridList/gridList.min.js
+ui/node_modules/angular-material/modules/closure/gridList/gridList.css

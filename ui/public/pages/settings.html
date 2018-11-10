@@ -1,0 +1,16 @@
+<h1>{{msg}}</h1>
+<form>
+	<div class="form-group">
+		<label for="ipAddrInput">IP Address </label>
+		<input type="text" ng-model="ipAddress" class="form-control" id="ipAddrInput" placeholder="IP Address">
+	</div>
+	<div class="form-group">
+		<label for="gatewayIpAddrInput"> Gateway IP Address </label>
+		<input type="text" ng-model ="gatewayIpAddress" class="form-control" id="gatewayIpAddrInput" placeholder="Gateway IP Address">
+	</div>
+	<div class="form-group">
+		<label for="screenSaverInput">Ekran Koruyucu Suresi</label>
+		<input type="number" ng-model="screenSaverPeriod" class="form-control" id="screenSaverInput">
+	</div>
+	<button type="submit" ng-click="saveSettings()" class="btn btn-primary">Kaydet</button>
+</form>

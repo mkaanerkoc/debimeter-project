@@ -1,0 +1,46 @@
+<div  class ="row" id="div1" ng-controller="measurement1Ctrl as m">
+	<div  style="height:360px" class="col-lg-8 col-md-7  col-sm-4">
+		<div class="card" style="background-color: #FaFaFa; width: 500;">
+				<div class="card-header">
+					<h2>{{m.selected.title}}</h2>
+				</div>
+				<div class="card-body">
+					 <ng-gauge  ng-click="gaugeClick(0)"
+					 	type="arch" size="320" thick="16" label="{{m.selected.unit}}" cap="round" 
+					 	foreground-color="{{m.selected.foregroundColor}}" duration = "350"
+                    	background-color="{{m.selected.backgroundColor}}" 
+                    	value="m.selected.value" min="m.selected.min" max="m.selected.max"
+						thresholds="m.enableThresholds ? m.thresholds : m.empty" fraction-size="m.selected.digit">
+					</ng-gauge>
+		 		</div>
+			</div>
+	</div>
+	<!--
+	<div  style="background-color:#F5FFFA; overflow-y: scroll; height:540px" class="col-lg-4 col-md-3 col-sm-6">
+		<div ng-repeat="x in channels">
+			<div ng-click=" channelRowClick( $index )">
+				<p><h3>{{x.title}}</h3></p>
+				<h4>{{x.value}}  {{x.unit}}</h4>
+			</div>
+		</div>
+	</div>
+	-->
+	<div  style="background-color:#FAFAFA; overflow-y: scroll; height:360px" class="col-lg-4 col-md-3 col-sm-6">
+	<table class="table table-striped">
+		<thead>
+	      <tr>
+	        <th>Kanal İsmi </th>
+	        <th>Değer</th>
+	        <th>Birim</th>
+	      </tr>
+	    </thead>
+		<tbody>
+			<tr ng-repeat="x in channels" ng-click=" channelRowClick( $index )">
+		        <td>{{x.title}}</td>
+		        <td>{{x.value}}</td>
+		        <td>{{x.unit}}</td>
+	      	</tr>
+		</tbody>
+	</table>
+	</div>
+</div>

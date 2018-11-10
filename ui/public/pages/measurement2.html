@@ -1,0 +1,41 @@
+<div id="dataValuesDiv" >
+	<div class="row">
+		<h1>{{msg}}</h1>
+		<!--<button 
+			type="button" class="btn btn-info" data-toggle="collapse" 
+			data-target="#moreGaugesDiv" ng-click="collapseBtnClick()">{{collapseBtnLabel}}
+		</button>-->
+	</div>
+	<p></p>
+	<form>
+		<div class="row">
+			<div class="col-lg-4 col-sm-6">
+				<div class="card" style="background-color: #FaFaFa; width: 18rem;">
+					<div class="card-header">
+						<h2>Toplam Debi</h2>
+					</div>
+					<div class="card-body">
+						 <h1>{{totalVolume}} (m3)</h1>
+						 <p>Son Resetlenme : {{lastResetTotalVolume}}</p>
+			 		</div>
+			 		<div class="card-footer">
+			 			<button 
+							type="button" class="btn btn-info" ng-click="resetTotalVolume()"> Toplam Debiyi Sıfırla
+						</button>
+			 		</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="card" style="background-color: #FaFaFa; width: 18rem;">
+					<div class="card-header">
+						<h2>Günlük Toplam Debi</h2>
+					</div>
+					<div class="card-body">
+						 <h1>{{dailyVolume}} (m3)</h1>
+			 		</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<br>
+</div>

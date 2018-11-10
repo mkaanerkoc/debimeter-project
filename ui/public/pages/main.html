@@ -1,0 +1,117 @@
+<div id="dataValuesDiv" ng-controller="mainCtrl as m">
+	<div class="row">
+		<h1>{{msg}}</h1>
+		<!--<button 
+			type="button" class="btn btn-info" data-toggle="collapse" 
+			data-target="#moreGaugesDiv" ng-click="collapseBtnClick()">{{collapseBtnLabel}}
+		</button>-->
+	</div>
+	<p></p>
+	<form>
+		<div class="row">
+			<div class="col-lg-4 col-sm-6">
+				<div class="card" style="background-color: #FaFaFa; width: 18rem;">
+					<div class="card-header">
+						<h2>{{m.g0.title}}</h2>
+					</div>
+					<div class="card-body">
+						 <ng-gauge  ng-click="gaugeClick(0)"
+						 	type="arch" size="260" thick="16" label="{{m.g0.unit}}" cap="round" 
+						 	foreground-color="{{m.g0.foregroundColor}}" duration = "350"
+	                    	background-color="{{m.g0.backgroundColor}}" 
+	                    	value="m.g0.value" min="m.g0.min" max="m.g0.max"
+							thresholds="m.enableThresholds ? m.thresholds : m.empty" fraction-size="m.g0.digit">
+						</ng-gauge>
+			 		</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="card" style="background-color: #FaFaFa; width: 18rem;">
+					<div class="card-header">
+						<h2>{{m.g1.title}}</h2>
+					</div>
+					<div class="card-body">
+						 <ng-gauge ng-click="gaugeClick(1)"
+						 	type="arch" size="260" thick="16" label="{{m.g1.unit}}" cap="round" 
+						 	foreground-color="{{m.g1.foregroundColor}}" duration = "350"
+	                    	background-color="{{m.g1.backgroundColor}}" 
+	                    	value="m.g1.value" min="m.g1.min" max="m.g1.max"
+							thresholds="m.enableThresholds ? m.thresholds : m.empty" fraction-size="m.g1.digit">
+						</ng-gauge>
+			 		</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="card" style="background-color: #FaFaFa; width: 18rem;">
+					<div class="card-header">
+						<h2>{{m.g2.title}}</h2>
+					</div>
+					<div class="card-body">
+						 <ng-gauge ng-click="gaugeClick(2)"
+						 	type="arch" size="260" thick="16" label="{{m.g2.unit}}" cap="round" 
+						 	foreground-color="{{m.g2.foregroundColor}}" duration = "350"
+	                    	background-color="{{m.g2.backgroundColor}}" 
+	                    	value="m.g2.value" min="m.g2.min" max="m.g2.max"
+							thresholds="m.enableThresholds ? m.thresholds : m.empty" fraction-size="m.g2.digit">
+						</ng-gauge>
+			 		</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		
+		<br><br>
+		<div id="moreGaugesDiv" class="row collapse">
+			<div class="col-lg-4 col-sm-6">
+				<div class="card" style="background-color: #FaFaFa; width: 18rem;">
+					<div class="card-header">
+						<h2>{{m.g3.title}}</h2>
+					</div>
+					<div class="card-body">
+						 <ng-gauge ng-click="gaugeClick(3)"
+						 	type="arch" size="260" thick="16" label="{{m.g3.unit}}" cap="round" 
+						 	foreground-color="{{m.g3.foregroundColor}}" duration = "350"
+	                    	background-color="{{m.g3.backgroundColor}}" 
+	                    	value="m.g3.value" min="m.g3.min" max="m.g3.max"
+							thresholds="m.enableThresholds ? m.thresholds : m.empty" fraction-size="m.g3.digit">
+						</ng-gauge>
+			 		</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="card" style="background-color: #FaFaFa; width: 18rem;">
+					<div class="card-header">
+						<h2>{{m.g4.title}}</h2>
+					</div>
+					<div class="card-body">
+						 <ng-gauge ng-click="gaugeClick(4)"
+						 	type="arch" size="260" thick="16" label="{{m.g4.unit}}" cap="round" 
+						 	foreground-color="{{m.g4.foregroundColor}}" duration = "350"
+	                    	background-color="{{m.g4.backgroundColor}}" 
+	                    	value="m.g4.value" min="m.g4.min" max="m.g4.max"
+							thresholds="m.enableThresholds ? m.thresholds : m.empty" fraction-size="1">
+						</ng-gauge>
+			 		</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="card" style="background-color: #FaFaFa; width: 18rem;">
+					<div class="card-header">
+						<h2>{{m.g5.title}}</h2>
+					</div>
+					<div class="card-body">
+						 <ng-gauge ng-click="gaugeClick(5)"
+						 	type="arch" size="260" thick="16" label="{{m.g5.unit}}" cap="round" 
+						 	foreground-color="{{m.g5.foregroundColor}}" duration = "350"
+	                    	background-color="{{m.g5.backgroundColor}}" 
+	                    	value="m.g5.value" min="m.g5.min" max="m.g5.max"
+							thresholds="m.enableThresholds ? m.thresholds : m.empty" fraction-size="1">
+						</ng-gauge>
+			 		</div>
+				</div>
+			</div>
+		</div>
+		<br>
+	</form>
+</div>
+

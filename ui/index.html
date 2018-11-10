@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+		<script src= "scripts/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="scripts/css/bootstrap.min.css" crossorigin="anonymous">
+       
+
+		
+        <script src="scripts/js/bootstrap.min.js" crossorigin="anonymous"></script>
+		<script src="scripts/angular.min.js"></script>
+        <script src="scripts/angular-aria.min.js"></script>
+		<script src="scripts/angular-route.min.js"></script>
+  		<script src="scripts/angularjs-gauge.min.js"></script>
+		<script src="scripts/angular-material.min.js"></script>
+        <script src="scripts/angular-animate.min.js"></script>
+        <script src="scripts/angular-sanitize.min.js"></script>
+        <script src="scripts/angular-on-screen-keyboard.min.js"></script>
+		
+        <!-- mke libs -->
+		<script src="public/js/angularBase.js"></script>
+		<script src="public/js/angularWebSocketService.js"></script>
+		<script src="public/js/mainController.js"></script>
+		<script src="public/js/calibrationController.js"></script>
+		<script src="public/js/aboutController.js"></script>
+		<script src="public/js/settingsController.js"></script>
+		<script src="public/js/diagnosticsController.js"></script>
+
+        <script src="public/js/measurement1Controller.js"></script>
+        <script src="public/js/measurement2Controller.js"></script>
+        <script src="public/js/measurement3Controller.js"></script>
+        
+		<!--<script src="public/js/webSocketManager.js"></script>  this should be at the end always ! -->
+		<link rel = "stylesheet" href="public/css/mystyle.css">
+        <link rel="stylesheet" href="scripts/angular-on-screen-keyboard.min.css">
+        <link rel="stylesheet" href="scripts/angular-material.min.css">
+        <style>
+        ::-webkit-scrollbar {
+              display: none;
+        }
+        .unselectable {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        </style>
+        
+	</head>
+
+   	<body ng-app="myApp">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Envita  FL v1.0 </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            </div>
+        </nav>
+        <div id="mySidenav" class="sidenav">
+            <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" onclick="closeNav()" >Ana Ekran</a>
+            <a href="#!m1" onclick="closeNav()" >Ölçümler - 1</a>
+            <a href="#!m2" onclick="closeNav()" >Ölçümler - 2</a>
+            <a href="#!settings" onclick="closeNav()" >Ayarlar</a>
+            <a href="#!calibration" onclick="closeNav()">Kalibrasyon</a>
+            <a href="#!diagnostics" onclick="closeNav()">Teşhis</a>
+            <a href="#!about" onclick="closeNav()">Hakkında</a>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <div class="container unselectable">
+            <div ng-view></div>
+        </div>
+    </body>
+
+	<script>
+		function openNav() 
+		{
+    		document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() 
+		{
+    		document.getElementById("mySidenav").style.width = "0";
+		}
+
+		$( document ).ready(function()
+		{
+	    	$("button").click(function()
+	    	{
+	        	$("p").hide();
+	    	});
+		});
+	</script>
+</html>

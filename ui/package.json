@@ -1,0 +1,28 @@
+{
+  "name": "debimeter-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ui_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mehmet kaan erkoc",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-animate": "^1.7.2",
+    "angular-aria": "^1.7.2",
+    "angular-material": "^1.1.10",
+    "angular-on-screen-keyboard": "^0.9.8",
+    "angular-route": "^1.7.2",
+    "angular-sanitize": "^1.7.2",
+    "angularjs-gauge": "^2.2.0",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "multer": "^1.3.1"
+  },
+  "devDependencies": {}
+}

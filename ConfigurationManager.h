@@ -64,7 +64,7 @@ typedef struct ApplicationConfiguration
 
 ApplicationConfiguration appConfigSt;
 
-extern ConfigurationResultEnum ConfigurationManager_Begin( void );
+extern ConfigurationResultEnum ConfigurationManager_Begin( const char* filePath );
 extern ConfigurationResultEnum ConfigurationManager_GetValue( const char *keyParam, char *valueParam );
 extern ConfigurationResultEnum ConfigurationManager_SetValue( const char *keyParam, char *valueParam );
 

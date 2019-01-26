@@ -252,11 +252,11 @@ void *DeviceMainTask(void *arg)
                 ravenEyeInfo.flowRate_Q = flowRate_Temp;
 
         		time( &timeStampHolder );
-        		totalVm.Update(&totalVm, ravenEyeInfo.flowRate_Q); // m3/day olarak guncelliyor
-        		dailyVm.Update(&dailyVm, ravenEyeInfo.flowRate_Q); // m3/day olarak guncelleniyor	
-                const time_t *ananinami_t = &dailyVm.lastReset;
+        		totalVm.Update( &totalVm, ravenEyeInfo.flowRate_Q ); // m3/day olarak guncelliyor
+        		dailyVm.Update( &dailyVm, ravenEyeInfo.flowRate_Q ); // m3/day olarak guncelleniyor	
+                const time_t *lastResetTimeStr = &dailyVm.lastReset;
         		dailyVmLastResetCheck = gmtime ((const time_t *)(&(dailyVm.lastReset)) ); // sknti burda...
-                //dailyVmLastResetCheck = localtime ( ananinami_t ); // sknti burda...
+                //dailyVmLastResetCheck = localtime ( lastResetTimeStr ); // sknti burda...
         		dailyVmLastResetControl = gmtime ( &timeStampHolder );			
         		/*printf("dailyVmLastResetControl : %02d:%02d:%02d , dailyVmLastResetCheck : %02d:%02d:%02d , dailyVm.lastReset :  %02d:%02d:%02d \n", 
                     dailyVmLastResetControl->tm_hour, dailyVmLastResetControl->tm_min,dailyVmLastResetControl->tm_sec,
@@ -558,6 +558,7 @@ uint16_t Calculate_ADS1115_Values( int16_t adcDiffRead, float resistorValue, flo
     return retValueTemp;
 }
 
+/* m3/gun hesapliyor */
 float    Calculate_FlowRateWithNotchFormula( uint16_t heightParam, float notchWidthParam )
 {
     const float multiplier_constant_1 = 3.6875F;

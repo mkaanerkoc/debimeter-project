@@ -13,7 +13,7 @@ FILE *configFile;
 
 int16_t RemoveSpaces(char* source);
 
-ConfigurationResultEnum ConfigurationManager_Begin( void )
+ConfigurationResultEnum ConfigurationManager_Begin( const char* filePath )
 {
     int16_t readLineByteCount = 0;
     char    *readLineBuffer = NULL;
@@ -36,13 +36,13 @@ ConfigurationResultEnum ConfigurationManager_Begin( void )
 
     appConfigSt.useNotchFormula             = 0;
     appConfigSt.heightOffsetValue           = 0;
-    appConfigSt.notchWidth                  = 5.0;
+    appConfigSt.notchWidth                  = 15.0;
     
     strcpy( appConfigSt.modbusTcpPortNumber, "503" );
     strcpy( appConfigSt.serialPortName, "/dev/ttyUSB0" );
 
 
-    configFile = fopen( CONFIG_FILE_PATH, "r" );
+    configFile = fopen( filePath, "r" );
     if ( configFile == NULL )
     {
         retValueTemp = CONFIG_FILE_COULD_NOT_FOUND;
